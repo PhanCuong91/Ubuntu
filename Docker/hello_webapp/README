@@ -11,7 +11,7 @@ Instruction:
 
 * Explaination:  
 	* Dockerfile:  
-		from python:2.7 			-> set baseimage is python version 2.7  
+		from python:2.7-alpine 			-> set baseimage is python version 2.7 alpine (small size)  
 		COPY . /app     			-> copy all file to /app in dockerimage  
 		WORKDIR /app				-> change to app directory  
 		RUN pip install -r requirements.txt     -> install flask from requirements.txt        
