@@ -1,0 +1,25 @@
+This repository shall does following item using Ubuntu OS:  
+* Create a Docker image for showing "Hello World!" in http://127.0.0.1:8080/  
+
+Instruction:  
+1. Intall Docker (https://docs.docker.com/install/linux/docker-ce/ubuntu/#targetText=Install%20from%20a%20package&targetText=Go%20to%20https%3A%2F%2Fdownload,version%20you%20want%20to%20install.)  
+2. Clone the repository to your computer  
+3. Go to directory of the repository in you computer  
+4. Run command: docker build -t web-image .  
+5. After step 4 finished, run command: docker run -d -p 8080:5000 --name hello-webapp web-image  
+6. Open a browser at address: http://127.0.0.1:8080/    
+
+* Explaination:  
+	* Dockerfile:  
+		from python:2.7-alpine 			-> set baseimage is python version 2.7 alpine (small size)  
+		COPY . /app     			-> copy all file to /app in dockerimage  
+		WORKDIR /app				-> change to app directory  
+		RUN pip install -r requirements.txt     -> install flask from requirements.txt        
+		ENTRYPOINT ["python"]			-> set python as executable of container  
+		CMD ["hello.py"]                        -> provide a default for an executing container   
+	* requirements.txt  
+		flask					-> neccessary module for the hello web application  
+	* hello.py					-> source code for the hello web application  
+	                                     
+
+
