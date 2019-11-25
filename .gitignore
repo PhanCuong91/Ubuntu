@@ -1,0 +1,6 @@
+# don't track content of these folders
+AWS/key/
+
+# don't track thes extension
+AWS/UbuntuAWS/ubuntu/remote-key
+*.pem
