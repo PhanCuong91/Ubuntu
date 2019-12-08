@@ -8,3 +8,15 @@ chmod 700 file 	Protects a file against any access from other users, while the i
 chmod 755 directory 	For files that should be readable and executable by others, but only changeable by the issuing user.
 chmod 775 file 	Standard file sharing mode for a group.
 chmod 777 file 	Everybody can do everything to this file.
+
+Eror: 
+warning: suboptimal pack - out of memory
+fatal: Out of memory, malloc failed (tried to allocate 50331649 bytes)
+fatal: The remote end hung up unexpectedly
+fatal: The remote end hung up unexpectedly
+fatal: The remote end hung up unexpectedly
+error: failed to push some refs to 'https://github.com/PhanCuong91/Ubuntu.git'
+solution:
+May be git is suboptimal tool for handling large amount of big blobs.
+You can disable multi-threaded compression to save memory: git config pack.threads 1 (in addition to other memory limiting options, like core.bigfilethreshold in newer Git)
+https://stackoverflow.com/questions/9561835/git-push-suboptimal-pack-out-of-memory
