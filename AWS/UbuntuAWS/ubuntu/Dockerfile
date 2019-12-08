@@ -14,7 +14,9 @@ RUN useradd remote_user && \
     mkdir /home/remote_user/.ssh  -p && \ 
     chmod 700 /home/remote_user/.ssh
 # should name authorized_keys not other names    
-COPY remote-key.pub /home/remote_user/.ssh/authorized_keys
+COPY remote-key.pub /home/remote_user/.ssh/authorized_keys 
+# copy script for saving sql to aws s3
+COPY cre-save-sql-aws-s3.sh /tmp/
 
 # give remote_user full access the .ssh folder
 # only user command chmod 600 can change the folder/file
