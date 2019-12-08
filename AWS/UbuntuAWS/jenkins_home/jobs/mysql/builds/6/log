@@ -1,0 +1,21 @@
+Started by user [8mha:////4B6CY8pYvtFIGWkmH8nkuI2DXvkcpudO57Rb8/hnzh3TAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgYe/dLi1CL90qTSvJJSAE8vFkvBAAAA[0mphan cuong
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/mysql
+[SSH] script:
+AWS_BUCKETNAME="jenkins-mysql-backup-pc"
+MYSQL_HOST="db_host"
+MYSQL_PASSWD=**********
+DATABASE_NAME="testdb"
+AWS_SECRET=**********
+
+/tmp/cre-save-sql-aws-s3.sh $MYSQL_HOST $MYSQL_PASSWD $DATABASE_NAME $AWS_SECRET $AWS_BUCKETNAME
+
+[SSH] executing...
+mysqldump: [Warning] Using a password on the command line interface can be insecure.
+Uploading your bd backup
+Completed 1.8 KiB/1.8 KiB (32.8 KiB/s) with 1 file(s) remainingupload: ../../tmp/db-2019-12-08-13-58-50.sql to s3://jenkins-mysql-backup-pc/db-2019-12-08-13-58-50.sql
+
+[SSH] completed
+[SSH] exit-status: 0
+
+Finished: SUCCESS

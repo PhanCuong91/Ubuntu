@@ -17,7 +17,8 @@ RUN useradd remote_user && \
 COPY remote-key.pub /home/remote_user/.ssh/authorized_keys 
 # copy script for saving sql to aws s3
 COPY cre-save-sql-aws-s3.sh /tmp/
-
+# make the script as executable
+RUN chmod +x /tmp/cre-save-sql-aws-s3.sh
 # give remote_user full access the .ssh folder
 # only user command chmod 600 can change the folder/file
 RUN chown remote_user:remote_user -R /home/remote_user/.ssh/ && \

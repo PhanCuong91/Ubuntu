@@ -14,6 +14,8 @@ services:
     image: remote-host
     build:
       context: ubuntu
+    volumes:
+      - "$PWD/remote_host:/tmp"
     networks: 
       - net
   db_host:
