@@ -1,0 +1,5 @@
+- hosts: test1
+  tasks:
+   - debug:
+       msg: "{{ MSG }}"
+   - shell: echo  "hello world from Ansible $(date)!" > /tmp/ansible-file
