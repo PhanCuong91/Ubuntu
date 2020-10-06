@@ -1,10 +1,6 @@
-Started at Mon Dec 09 13:07:31 UTC 2019
-Checking fisrt-test
-Checking mysql
-Checking remote-test
-Finished at Mon Dec 09 13:07:31 UTC 2019. 33ms
-Started at Tue Dec 10 13:07:31 UTC 2019
-Checking fisrt-test
-Checking mysql
-Checking remote-test
-Finished at Tue Dec 10 13:07:31 UTC 2019. 8ms
+Started at Mon Oct 05 09:02:18 UTC 2020
+Checking backup-aws-bucket
+Checking myFisrtJob
+Checking parameterJob
+Checking remote_job
+Finished at Mon Oct 05 09:02:18 UTC 2020. 12ms

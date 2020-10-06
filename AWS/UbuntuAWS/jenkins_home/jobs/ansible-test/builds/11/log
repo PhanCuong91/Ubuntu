@@ -1,0 +1,26 @@
+Started by user [8mha:////4KBTASWJbjWEO2b8b2W+ZJbFwJCejfu/iYw42Tli1QbRAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mJenkins Admin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/ansible-test
+[8mha:////4HUqQ3m2QzTAzx8odSj6LU7T0nQ7NksoEPr6hY3pqziCAAAAqx+LCAAAAAAAAP9b85aBtbiIQSujNKU4P0+vIKc0PTOvWC8xrzgzOT8nv0gvMbkkEyjhCKb88ktSdwVsu2efuqidiYHRh4EDIu2ZUsIg5JOVWJaon5OYl64fXFKUmZduXVHEIAU1ODk/rzg/J1XPGUKDDGKAAEYmBoaKghIGFUsTS4u0lNRk3VSzlBRdk6S0JF1LQwMTXQNTA0uzJDMjs2QDYwAZxdEqrwAAAA==[0m[ansible-test] $ /bin/sh -xe /tmp/jenkins7670458172626543717.sh
++ cp /var/jenkins_home/ansible/ansible.cfg /var/jenkins_home/workspace/ansible-test
+[ansible-test] $ ansible-playbook /var/jenkins_home/ansible/play.yml -i /var/jenkins_home/ansible/hosts -f 5 -e "MSG='Hello world!'"
+/usr/local/lib/python3.5/dist-packages/ansible/parsing/vault/__init__.py:44: CryptographyDeprecationWarning: Python 3.5 support will be dropped in the next release ofcryptography. Please upgrade your Python.
+  from cryptography.exceptions import InvalidSignature
+
+PLAY [test1] *******************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[0;32mok: [test1][0m
+
+TASK [debug] *******************************************************************
+[0;32mok: [test1] => {[0m
+[0;32m    "msg": "Hello world!"[0m
+[0;32m}[0m
+
+TASK [shell] *******************************************************************
+[0;33mchanged: [test1][0m
+
+PLAY RECAP *********************************************************************
+[0;33mtest1[0m                      : [0;32mok=3   [0m [0;33mchanged=1   [0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+Finished: SUCCESS

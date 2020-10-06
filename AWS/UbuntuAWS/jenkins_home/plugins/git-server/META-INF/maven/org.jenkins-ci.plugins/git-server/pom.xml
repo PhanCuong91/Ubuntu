@@ -4,11 +4,11 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>git-server</artifactId>
-  <version>1.8</version>
+  <version>1.9</version>
   <packaging>hpi</packaging>
   <name>Jenkins GIT server Plugin</name>
   <description>This library plugin provides embedded Git server capability inside Jenkins</description>
-  <url>https://wiki.jenkins.io/display/JENKINS/Git+Server+Plugin</url>
+  <url>https://github.com/jenkinsci/git-server-plugin</url>
   <inceptionYear>2016</inceptionYear>
   <licenses>
     <license>
@@ -20,7 +20,7 @@
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/git-server-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/git-server-plugin.git</developerConnection>
-    <tag>git-server-1.8</tag>
+    <tag>git-server-1.9</tag>
     <url>https://github.com/jenkinsci/git-server-plugin</url>
   </scm>
   <distributionManagement>

@@ -1,0 +1,22 @@
+Started by user [8mha:////4KBTASWJbjWEO2b8b2W+ZJbFwJCejfu/iYw42Tli1QbRAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mJenkins Admin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/backup-aws-bucket
+[SSH] script:
+MYSQL_HOST="db_host"
+MYSQL_PASSWD=**********
+AWS_SECRET_KEY=**********
+MYSQL_DB="testdb"
+AWS_BUCKET_NAME="jenkins-mysql-backup-pc"
+
+/tmp/aws_cli_s3.sh $MYSQL_HOST $MYSQL_PASSWD $MYSQL_DB $AWS_SECRET_KEY $AWS_BUCKET_NAME
+
+[SSH] executing...
+mysqldump: [Warning] Using a password on the command line interface can be insecure.
+/tmp/aws_cli_s3.sh: 9:  : not found
+uploading db backup
+Completed 1.8 KiB/1.8 KiB (1.3 KiB/s) with 1 file(s) remainingupload: ../../tmp/db-2020-10-04-06-55-50.sql to s3://jenkins-mysql-backup-pc/db-2020-10-04-06-55-50.sql
+
+[SSH] completed
+[SSH] exit-status: 0
+
+Finished: SUCCESS

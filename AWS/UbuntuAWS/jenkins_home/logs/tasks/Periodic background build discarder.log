@@ -1,0 +1,36 @@
+Started at Tue Oct 06 03:14:29 UTC 2020
+Processing ansible-test
+Offering ansible-test to Project Build Discarder
+Processing backup-aws-bucket
+Offering backup-aws-bucket to Project Build Discarder
+Processing myFisrtJob
+Offering myFisrtJob to Project Build Discarder
+Processing parameterJob
+Offering parameterJob to Project Build Discarder
+Processing remote_job
+Offering remote_job to Project Build Discarder
+Finished at Tue Oct 06 03:14:29 UTC 2020. 12ms
+Started at Tue Oct 06 04:14:29 UTC 2020
+Processing ansible-test
+Offering ansible-test to Project Build Discarder
+Processing backup-aws-bucket
+Offering backup-aws-bucket to Project Build Discarder
+Processing myFisrtJob
+Offering myFisrtJob to Project Build Discarder
+Processing parameterJob
+Offering parameterJob to Project Build Discarder
+Processing remote_job
+Offering remote_job to Project Build Discarder
+Finished at Tue Oct 06 04:14:29 UTC 2020. 3ms
+Started at Tue Oct 06 05:14:29 UTC 2020
+Processing ansible-test
+Offering ansible-test to Project Build Discarder
+Processing backup-aws-bucket
+Offering backup-aws-bucket to Project Build Discarder
+Processing myFisrtJob
+Offering myFisrtJob to Project Build Discarder
+Processing parameterJob
+Offering parameterJob to Project Build Discarder
+Processing remote_job
+Offering remote_job to Project Build Discarder
+Finished at Tue Oct 06 05:14:29 UTC 2020. 9ms

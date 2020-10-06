@@ -1,9 +1,0 @@
-Started by user [8mha:////4B6CY8pYvtFIGWkmH8nkuI2DXvkcpudO57Rb8/hnzh3TAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgYe/dLi1CL90qTSvJJSAE8vFkvBAAAA[0mphan cuong
-Running as SYSTEM
-Building in workspace /var/jenkins_home/workspace/fisrt-test
-[fisrt-test] $ /bin/sh -xe /tmp/jenkins540579500264398874.sh
-+ echo hello world
-hello world
-+ echo nothing
-nothing
-Finished: SUCCESS

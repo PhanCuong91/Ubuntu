@@ -1,0 +1,12 @@
+Started by user [8mha:////4KBTASWJbjWEO2b8b2W+ZJbFwJCejfu/iYw42Tli1QbRAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mJenkins Admin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/myFisrtJob
+[myFisrtJob] $ /bin/sh -xe /tmp/jenkins8559473602431717068.sh
++ echo hello world!
+hello world!
++ date
++ echo current date is Fri Oct 2 07:28:30 UTC 2020
+current date is Fri Oct 2 07:28:30 UTC 2020
++ NAME=Cuong
++ echo Hello, my name is @NAME
+Finished: SUCCESS
