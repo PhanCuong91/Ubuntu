@@ -1,0 +1,95 @@
+1. window size of linux is constant in vm virtualbox
+solution:
+sudo apt install build-essential dkms linux-headers-$(uname -r)
+after: Devices -> Insert Guest ....
+
+2. Cannot connect Virtual Linux via Putty
+solution:
+sudo apt-get install openssh-server
+ip a : check ip address to configure Putty
+
+3.  true=true: command not found once use boolean parameter for Jenkins job
+solution:
+if $SHOW == "true"; then 
+  echo "Hello $NAME $LASTNAME"
+else 
+  echo "show is false"
+fi
+
+instead of
+if $SHOW=="true"; then 
+  echo "Hello $NAME $LASTNAME"
+else 
+  echo "show is false"
+fi
+
+4. using ssh key:
+scenario:
+vm ware linux has private key and create a docker which includes:
+	+ jenkins container
+	+ ubuntu container
+
+request: using jenkins to log in ubuntu by using ssh key
+step 1: copy public key to ubuntu
+step 2: copy private key to jenkins
+step 3: use this command on jenkins: ssh -i "path of private key" "user of ubuntu"@"name of ubuntu"
+error:
+> '/c/Users/Ben/.ssh/id_rsa' are too
+> open. It is recommended that your
+> private key files are NOT accessible
+> by others. This private key will be
+> ignored. bad permissions: ignore key:
+
+change mode private key to 700 
+
+5. increase space disk of linux in virtualbox
+cannot decrease
+step 1: increase size of vdi in "virtual media manager". vdi size is increased but unallocating
+Step 2: set boot with gpart iso "https://gparted.org/download.php"
+step 3: start virtual then change size. finally apply it.
+step 4: restart vb
+
+6. Mysql
+problem
+mysqldump: Couldn't execute 'SELECT COLUMN_NAME, JSON_EXTRACT(HISTOGRAM,
+'$."number-of-buckets-specified"') FROM
+information_schema.COLUMN_STATISTICS WHERE SCHEMA_NAME = 'db' AND
+TABLE_NAME = 'Absence';':
+Unknown table 'COLUMN_STATISTICS' in information_schema (1109)
+
+solution: (add --column-statistics=0 because of default in mysqldump 8)
+mysqldump --column-statistics=0 --host=<server> --user=<user> --password=<password> 
+
+7. Fill password by cli in mysql (-p$DB_PASSWD no space)
+mysqldump -u root -h $DB_HOST -p$DB_PASSWD $DB_NAME
+
+
+8 anisble via ssh
+run command  in ansible folder: ansible -i hosts -m ping test1
+test1 -> defined in hosts file
+
+ "msg": "Failed to create temporary directory.In some cases, you may have been able to authenticate and did not have permissions on the target directory. Consider changing the remote tmp path in ansible.cfg to a path rooted in \"/tmp\", for more error information use -vvv. Failed command was: ( umask 77 && mkdir -p \"` echo /home/remote_user/.ansible/tmp `\"&& mkdir \"` echo /home/remote_user/.ansible/tmp/ansible-tmp-1601865560.920455-93-222377019677271 `\" && echo ansible-tmp-1601865560.920455-93-222377019677271=\"` echo /home/remote_user/.ansible/tmp/ansible-tmp-1601865560.920455-93-222377019677271 `\" ), exited with result 1",
+    "unreachable": true
+	
+reason: dont have permission in $HOME directory and create tmp in $HOME/.ansible/ (default if not have ansible.cfg)
+solution:
+create a ansible.cfg in ansible folder and create definition:
+[defaults] 
+local_tmp = /tmp/.ansible/tmp 
+remote_tmp = /tmp/.ansible/tmp
+
+ansible.errors.AnsibleError: Invalid settings supplied for DEFAULT_LOCAL_TMP: Unable to create local directories(/.ansible/tmp): [Errno 13] Permission denied: b'/.ansible'
+
+9 502 bad gateway nginx ubuntu:
+prerequistite:
+ + install php-fpm nginx
+ + add something to nginx.cfg
+
+issue: 502 bad gateway once connect server_name in nginx.cfg
+
+solution:
+The fastcgi_pass location must match the listen = value in /etc/php/7.0/fpm/pool.d/www.conf. It is preferable for performance reasons for PHP-FPM to listen on a UNIX socket instead of a TCP address. Only change this if you require PHP-FPM use network connections
+---> fastcgi_pass unix:/run/php/php7.3-fpm.sock;
+
+10: mysqli_connect does not run once only php-mysql installation
+solution: intall php7.3-mysql
